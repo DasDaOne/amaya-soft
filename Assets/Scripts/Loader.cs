@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -53,7 +50,7 @@ public class Loader : MonoBehaviour
         StartCoroutine(RestartCoroutine());
     }
 
-    public IEnumerator RestartCoroutine()
+    private IEnumerator RestartCoroutine()
     {
         _level = 0;
         restartButtonCanvas.SetActive(false);

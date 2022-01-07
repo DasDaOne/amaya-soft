@@ -1,12 +1,11 @@
 ﻿using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Cell : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject mainSpriteHolder;
-    [SerializeField] private ParticleSystem particleSystem;
+    [SerializeField] private ParticleSystem particles;
     private CellData _cellData;
     private AnswerChecker _answerChecker;
     
@@ -33,7 +32,7 @@ public class Cell : MonoBehaviour
 
     private void PlayCorrectAnswerAnimation()
     {
-        particleSystem.Play();
+        particles.Play();
         Sequence bounce = DOTween.Sequence();
         bounce.Append(mainSpriteHolder.transform.DOScale(1.2f, .15f));
         bounce.Append(mainSpriteHolder.transform.DOScale(.95f, .15f));

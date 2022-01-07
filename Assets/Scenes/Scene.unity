@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &23100879
 Transform:
   m_ObjectHideFlags: 0
@@ -380,7 +380,9 @@ MonoBehaviour:
   - {x: 3, y: 2}
   - {x: 3, y: 3}
   restartButtonCanvas: {fileID: 631147382}
-  loadingScreen: {fileID: 1478960367}
+  overlapCollider: {fileID: 23100878}
+  loadingScreen: {fileID: 567671231}
+  loadingScreenText: {fileID: 894774680}
   createdLevelLoaderEvent:
     m_PersistentCalls:
       m_Calls:
@@ -584,7 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -922,8 +924,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 0
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1142,7 +1144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1478960368
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class LevelLoader : MonoBehaviour
@@ -37,7 +35,7 @@ public class LevelLoader : MonoBehaviour
         _squareGrid.Init();
     }
 
-    public List<string> GetAllIdentifiers()
+    private List<string> GetAllIdentifiers()
     {
         List<string> identifiers = new List<string>();
         
