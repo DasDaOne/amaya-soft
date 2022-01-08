@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5113262700777027447}
   mainSpriteHolder: {fileID: 4232632592814440029}
-  particleSystem: {fileID: 8001584224965133367}
+  particles: {fileID: 8001584224965133367}
 --- !u!61 &4600094323254791610
 BoxCollider2D:
   m_ObjectHideFlags: 0

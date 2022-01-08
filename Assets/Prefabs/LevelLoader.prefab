@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 4964703297236889891, guid: 8fd186360db94da42afd7f572515a940,
     type: 3}
-  cellDataBundle: {fileID: 11400000, guid: b983294198dcd4b43bece93c0f4e9347, type: 2}
+  cellDataBundle: {fileID: 11400000, guid: 1748631b7e6b96049a11fcd84cb3c64c, type: 2}
