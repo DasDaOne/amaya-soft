@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
         _answerChecker = GameObject.Find("GameManager").GetComponent<AnswerChecker>();
     }
 
-    public void LoadLevel(Vector2Int levelDimensions, int levelId)
+    public void LoadLevel(Vector2Int levelDimensions)
     {
         Destroy(_grid);
         
@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour
         
         _grid = Instantiate(gridPrefab);
         _squareGrid = _grid.GetComponent<SquareGrid>();
-        _squareGrid.SetParameters(levelDimensions.x, levelDimensions.y, cellDataBundle, GetAllIdentifiers(), levelId, _correctIdentifier);
+        _squareGrid.SetParameters(levelDimensions.x, levelDimensions.y, cellDataBundle, GetAllIdentifiers(), _correctIdentifier); 
         _squareGrid.Init();
     }
 
@@ -44,7 +44,7 @@ public class LevelLoader : MonoBehaviour
             identifiers.Add(cellData.Identifier);
         }
 
-        return identifiers;
+        return identifiers; 
     }
 
     private void OnDestroy()

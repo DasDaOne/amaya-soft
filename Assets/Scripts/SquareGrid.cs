@@ -10,17 +10,15 @@ public class SquareGrid : MonoBehaviour
 
     private int _width;
     private int _height;
-    private int _levelId;
     private CellDataBundle _cellDataBundle;
     private string _correctIdentifier;
     private List<string> _identifiers;
 
-    public void SetParameters(int width, int height, CellDataBundle cellDataBundle, List<string> identifiers, int levelId, string correctIdentifier)
+    public void SetParameters(int width, int height, CellDataBundle cellDataBundle, List<string> identifiers, string correctIdentifier)
     {
         _width = width;
         _height = height;
         _cellDataBundle = cellDataBundle;
-        _levelId = levelId;
         _correctIdentifier = correctIdentifier;
         _identifiers = identifiers;
     }
@@ -40,17 +38,15 @@ public class SquareGrid : MonoBehaviour
                 Cell cellScript = cell.GetComponent<Cell>();
                 if (i * _width + j == indexOfCorrectCell)
                 {
-                    cellScript.SetCellParameters(Array.Find(_cellDataBundle.CellData, x => x.Identifier == _correctIdentifier));
+                    cellScript.SetCellParameters(Array.Find(_cellDataBundle.CellData, x => x.Identifier == _correctIdentifier)); 
                 }
                 else
                 {
                     int index = Random.Range(0, _identifiers.Count);
                     cellScript.SetCellParameters(Array.Find(_cellDataBundle.CellData, x => x.Identifier == _identifiers[index]));
-                    _identifiers.RemoveAt(index);
+                    _identifiers.RemoveAt(index); 
                 }
                 cellScript.Init();
-                if(_levelId == 0)
-                    cellScript.PlayBounceAnimation();
             }
         }
 

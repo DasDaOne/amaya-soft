@@ -8,7 +8,12 @@ public class Cell : MonoBehaviour
     [SerializeField] private ParticleSystem particles;
     private CellData _cellData;
     private AnswerChecker _answerChecker;
-    
+
+    private void Start()
+    {
+        GameObject.Find("GameManager").GetComponent<Loader>().AddStartAnimationListener(PlayBounceAnimation);
+    }
+
     public void SetCellParameters(CellData cellData)
     {
         _cellData = cellData;
@@ -21,7 +26,7 @@ public class Cell : MonoBehaviour
         spriteRenderer.transform.Rotate(new Vector3(0, 0, _cellData.Rotation));
     }
 
-    public void PlayBounceAnimation()
+    private void PlayBounceAnimation()
     {
         Sequence bounce = DOTween.Sequence();
         bounce.Append(transform.DOScale(0, 0));
